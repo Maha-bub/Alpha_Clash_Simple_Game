@@ -1,15 +1,8 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins:{
-     tailwindcss: { config: './tailwindcss-config.js' }
-
-  }
- 
-}
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",   
+    ],
+    theme: { extends: {}, },
+    plugins: [],
+  } 
+  
