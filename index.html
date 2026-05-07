@@ -5,29 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha clash pro</title>
     <!-- daisy ui setup -->
-   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
   <body class="poppins-regular">
     <main
-      class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center"
+      class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center "
     >
       <!-- Home section: play  -->
-      <section class="home items-center min-h-screen text-white flex justify-center item-center border hidden ">
+      <section
+        class="home items-center min-h-screen text-white flex justify-center item-center border hidden"
+      >
         <div class="flex flex-col items-center gap-y-8">
           <h1 class="text-8xl bold anton-regular uppercase">Alpha Clash Pro</h1>
           <p>Unleash Your Keyboard Kun g Fu: Press "Enter" to Play</p>
-          <button class="btn bg-white text-black">
-            Play Now
-          </button>
+          <button class="btn bg-white text-black">Play Now</button>
         </div>
       </section>
 
       <!-- Playground -->
-      <section class="play-ground">
+      <section class="play-ground w-full items-center items-center  justify-center" >
+        <div class="h-full flex flex-col gap-y-8 justify-center items-center">
+          <!-- plaground container screen -->
+          <div class="bg-[#ffffffB3] border-[#010313CC] h-80 w-10/12 border-[15px] rounded-2xl mx-auto">
+              <div class="flex justify-center">
+                <p class="bg-[#010313b2] w-5/12 px-6 pb-4 rounded-b-md text-white flex justify-center items-center">Don't watch  keyboard while playing....</p>
 
-        
+              </div>
+          </div>
+
+          <!-- keyboard layout -->
+          <div>
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd">q</kbd>
+              <kbd class="kbd">w</kbd>
+              <kbd class="kbd">e</kbd>
+              <kbd class="kbd">r</kbd>
+              <kbd class="kbd">t</kbd>
+              <kbd class="kbd">y</kbd>
+              <kbd class="kbd">u</kbd>
+              <kbd class="kbd">i</kbd>
+              <kbd class="kbd">o</kbd>
+              <kbd class="kbd">p</kbd>
+            </div>
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd">a</kbd>
+              <kbd class="kbd">s</kbd>
+              <kbd class="kbd">d</kbd>
+              <kbd class="kbd">f</kbd>
+              <kbd class="kbd">g</kbd>
+              <kbd class="kbd">h</kbd>
+              <kbd class="kbd">j</kbd>
+              <kbd class="kbd">k</kbd>
+              <kbd class="kbd">l</kbd>
+            </div>
+            <div class="my-1 flex w-full justify-center gap-1">
+              <kbd class="kbd">z</kbd>
+              <kbd class="kbd">x</kbd>
+              <kbd class="kbd">c</kbd>
+              <kbd class="kbd">v</kbd>
+              <kbd class="kbd">b</kbd>
+              <kbd class="kbd">n</kbd>
+              <kbd class="kbd">m</kbd>
+              <kbd class="kbd">/</kbd>
+            </div>
+          </div>
+
+          <!-- button layout -->
+          <div class="flex justify-between sm:w-11/12 md:w-8/12 items-center">
+            <button class="btn bg-purple-700 px-4 text-white rounded-full">
+              Life
+              <img class="bg-blend-darken" src="images/Heart.svg" alt="" />
+              <span>1</span>
+            </button>
+            <button class="btn bg-purple-700 px-4 text-white rounded-full">
+              score
+              <img src="images/dollar.svg" alt="" />
+              <span>1</span>
+            </button>
+          </div>
+        </div>
       </section>
 
       <!-- score part -->
