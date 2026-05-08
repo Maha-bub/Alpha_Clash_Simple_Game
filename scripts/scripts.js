@@ -20,19 +20,33 @@ function handleKeyboardButtonPress(event){
     // get the expected key press
     const currectAlphabetElement=document.getElementById('current-alphabet');
     const currentAlphabetText= currectAlphabetElement.innerText;
-    const expectedAlphabet=currentAlphabetText.toLocaleLowerCase();
+    const screenShowAlphabet=currentAlphabetText.toLocaleLowerCase();
     // console.log(playerPressedKey,currentAlphabetText)
 
 
     //check mathced or not player pressd key and expected key
-    if(playerPressedKey===expectedAlphabet){
+    if(playerPressedKey===screenShowAlphabet){
         console.log("you pressed the right key!!");
-
+        // your pressed the right button so, you deserve a award
+        const currentScoreElement=document.getElementById('current-score');
+        const currentScoreText=currentScoreElement.innerText;
+        const currentScore=parseInt(currentScoreText);
+        
+        let newScore=currentScore + 1;
+        console.log(newScore);
+        
+        //show the updated score to the score button
+        currentScoreElement.innerText=newScore;
     }
     else{
         console.log("you pressed the wrong key");
     }
-    removeBackgroundColorPressedKey(expectedAlphabet);
+
+    //
+    removeBackgroundColorPressedKey(screenShowAlphabet);
+
+    // To continue the game call alphabeticGame function for get a random alphabet 
+
     alphabaticGame();
 
     
