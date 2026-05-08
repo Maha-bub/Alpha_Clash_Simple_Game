@@ -50,17 +50,29 @@ function handleKeyboardButtonPress(event) {
 
     // //show the updated score to the score button
     // currentScoreElement.innerText = newScore;
-  } else {
-    console.log("you pressed the wrong key");
-    //get the currect life
-    const currentLifeElements = document.getElementById("current-life");
-    const currentLifeText = currentLifeElements.innerText;
-    const currentLife = parseInt(currentLifeText);
 
-    const newLife = currentLife - 1;
+  } else {
+
+    console.log("you pressed the wrong key");
+    //use utility function to update life count
+
+    const currentLife=getElementVlaueById('current-life');
+    const updatedLife=currentLife - 1;
+
+    setElementValueById('current-life',updatedLife);
+
+
+
+    //-----------------------------------------------
+    //get the currect life
+    // const currentLifeElements = document.getElementById("current-life");
+    // const currentLifeText = currentLifeElements.innerText;
+    // const currentLife = parseInt(currentLifeText);
+
+    // const newLife = currentLife - 1;
 
     //show the updated life to the screen
-    currentLifeElements.innerText = newLife;
+    // currentLifeElements.innerText = newLife;
   }
 
   //
