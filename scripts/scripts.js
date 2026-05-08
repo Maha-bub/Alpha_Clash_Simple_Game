@@ -62,6 +62,9 @@ function handleKeyboardButtonPress(event) {
     setElementValueById('current-life',updatedLife);
 
 
+    if (updatedLife===0){
+        gameOver()
+    }
 
     //-----------------------------------------------
     //get the currect life
@@ -99,8 +102,25 @@ function alphabaticGame() {
 }
 
 function playNow() {
+    //hide everything wiout playground
+
   hideElementById("home-section");
+  hideElementById('play-ground');
+  showElementById('final-score');
   showElementById("play-ground");
 
+
+  //reset score and life
+  
+  setElementValueById('current-life',5);
+  setElementValueById('current-score',0);
+  
   alphabaticGame();
+}
+
+
+
+function gameOver(){
+    hideElementById('play-ground');
+    showElementById('final-score');
 }
