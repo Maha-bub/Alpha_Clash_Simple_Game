@@ -31,7 +31,8 @@ function handleKeyboardButtonPress(event){
         const currentScoreElement=document.getElementById('current-score');
         const currentScoreText=currentScoreElement.innerText;
         const currentScore=parseInt(currentScoreText);
-        
+
+        //update current score by performance
         let newScore=currentScore + 1;
         console.log(newScore);
         
@@ -40,6 +41,19 @@ function handleKeyboardButtonPress(event){
     }
     else{
         console.log("you pressed the wrong key");
+        //get the currect life 
+        const currentLifeElements=document.getElementById('current-life');
+        const currentLifeText=currentLifeElements.innerText;
+        const currentLife=parseInt(currentLifeText);
+
+        const newLife=currentLife-1;
+
+        //show the updated life to the screen
+        currentLifeElements.innerText=newLife;
+
+
+
+
     }
 
     //
