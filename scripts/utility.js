@@ -28,3 +28,8 @@ function setBackgroundColorKey(keyId){
     const alphabet=document.getElementById(keyId);
     alphabet.classList.add('bg-orange-400');
 }
+
+function removeBackgroundColorPressedKey(ElementId){
+    const element=document.getElementById(ElementId);
+    element.classList.remove('bg-orange-400');
+}

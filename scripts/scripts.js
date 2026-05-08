@@ -13,9 +13,33 @@
     // using utility function for code reuse
 // }
 
-function handleKeyboardButtonPress(){
-    console.log("keyboard button pressed!!!");
+function handleKeyboardButtonPress(event){
+    const playerPressedKey=event.key;
+    console.log("Player pressed key",playerPressedKey);
+
+    // get the expected key press
+    const currectAlphabetElement=document.getElementById('current-alphabet');
+    const currentAlphabetText= currectAlphabetElement.innerText;
+    const expectedAlphabet=currentAlphabetText.toLocaleLowerCase();
+    // console.log(playerPressedKey,currentAlphabetText)
+
+
+    //check mathced or not player pressd key and expected key
+    if(playerPressedKey===expectedAlphabet){
+        console.log("you pressed the right key!!");
+
+    }
+    else{
+        console.log("you pressed the wrong key");
+    }
+    removeBackgroundColorPressedKey(expectedAlphabet);
+    alphabaticGame();
+
+    
 }
+
+
+
 document.addEventListener('keyup',handleKeyboardButtonPress);
 
 
