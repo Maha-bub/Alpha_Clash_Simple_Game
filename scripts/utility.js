@@ -33,3 +33,17 @@ function removeBackgroundColorPressedKey(ElementId){
     const element=document.getElementById(ElementId);
     element.classList.remove('bg-orange-400');
 }
+
+
+function getElementVlaueById(ElementId){
+    const element=document.getElementById(ElementId);
+    const elementValueText=element.innerText;
+    const value=parseInt(elementValueText);
+    return value;
+}
+
+
+function setElementValueById(ElementId,value){
+    const element=document.getElementById(ElementId);
+    element.innerText=value;
+}
