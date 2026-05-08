@@ -20,8 +20,12 @@ function alphabaticGame(){
     const alphabet=randomAlphabet();
     console.log('random alphabet create every single clicked',alphabet);
 
+    // set randomrandomly genarated alphabet to the screen (show it)
+    const currentAlphabet=document.getElementById('current-alphabet');
+    currentAlphabet.innerText=alphabet;
 
 }
+
 
 function playNow(){
 

@@ -19,7 +19,12 @@ function randomAlphabet(){
     // console.log(indexNumber);
     const alphabet=alphabets[indexNumber];
     // console.log(indexNumber,alphabet);
-    return alphabet;//return alphabet return the creted alphabet to the function
+    return alphabet;//return alphabet return the creted alphabet to the function 
     
-    
+}
+
+// heiglight key for every random value
+function setBackgroundColorKey(keyId){
+    const alphabet=document.getElementById(keyId);
+    alphabet.classList().add('bg-orange-400');
 }
