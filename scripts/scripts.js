@@ -13,6 +13,11 @@
     // using utility function for code reuse
 // }
 
+function handleKeyboardButtonPress(){
+    console.log("keyboard button pressed!!!");
+}
+document.addEventListener('keyup',handleKeyboardButtonPress);
+
 
 // Get a random alphabet function
 
