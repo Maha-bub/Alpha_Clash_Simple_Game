@@ -23,8 +23,8 @@ function randomAlphabet(){
     
 }
 
-// heiglight key for every random value
+// heiglight key for every randomly genarated alphabet
 function setBackgroundColorKey(keyId){
     const alphabet=document.getElementById(keyId);
-    alphabet.classList().add('bg-orange-400');
+    alphabet.classList.add('bg-orange-400');
 }
