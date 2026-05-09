@@ -13,7 +13,7 @@
 
 function handleKeyboardButtonPress(event) {
   const playerPressedKey = event.key;
-  console.log("Player pressed key", playerPressedKey);
+  // console.log("Player pressed key", playerPressedKey);
 
   // get the expected key press
   const currectAlphabetElement = document.getElementById("current-alphabet");
@@ -23,7 +23,7 @@ function handleKeyboardButtonPress(event) {
 
   //check mathced or not player pressd key and expected key
   if (playerPressedKey === screenShowAlphabet) {
-    console.log("you pressed the right key!!");
+    // console.log("you pressed the right key!!");
 
 
 
@@ -123,4 +123,10 @@ function playNow() {
 function gameOver(){
     hideElementById('play-ground');
     showElementById('final-score');
+
+    //get the update final score
+    //1. get the final score 
+    const lastScore=getElementVlaueById('current-score');
+    // console.log(lastScore)
+    setElementValueById('total-score',lastScore);
 }
