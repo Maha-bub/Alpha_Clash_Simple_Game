@@ -15,6 +15,10 @@ function handleKeyboardButtonPress(event) {
   const playerPressedKey = event.key;
   // console.log("Player pressed key", playerPressedKey);
 
+  if (playerPressedKey === "Escape") {
+    gameOver();
+  }
+
   // get the expected key press
   const currectAlphabetElement = document.getElementById("current-alphabet");
   const currentAlphabetText = currectAlphabetElement.innerText;
@@ -25,45 +29,42 @@ function handleKeyboardButtonPress(event) {
   if (playerPressedKey === screenShowAlphabet) {
     // console.log("you pressed the right key!!");
 
-
-
-     //  use common utility function for  reduce code
+    //  use common utility function for  reduce code
 
     const currentScore = getElementVlaueById("current-score");
-    const updatedScore=currentScore + 1;
-    setElementValueById('current-score',updatedScore);
-
-
-
+    const updatedScore = currentScore + 1;
+    setElementValueById("current-score", updatedScore);
 
     //------------------------------------------------------------------
-    
 
     // const currentScoreElement=document.getElementById('current-score');
     // const currentScoreText=currentScoreElement.innerText;
     // const currentScore=parseInt(currentScoreText);
 
-   
     // //update current score by performance
     // let newScore = currentScore + 1;
     // console.log(newScore);
 
     // //show the updated score to the score button
     // currentScoreElement.innerText = newScore;
+    const newScore = currentScore + 1;
+    // // 3. show the updated score
+    // currentScoreElement.innerText = newScore;
 
+    // start a new round
+    removeBackgroundColorPressedKey(screenShowAlphabet);
+    alphabaticGame();
   } else {
-
     console.log("you pressed the wrong key");
     //use utility function to update life count
 
-    const currentLife=getElementVlaueById('current-life');
-    const updatedLife=currentLife - 1;
+    const currentLife = getElementVlaueById("current-life");
+    const updatedLife = currentLife - 1;
 
-    setElementValueById('current-life',updatedLife);
+    setElementValueById("current-life", updatedLife);
 
-
-    if (updatedLife===0){
-        gameOver()
+    if (updatedLife === 0) {
+      gameOver();
     }
 
     //-----------------------------------------------
@@ -77,13 +78,6 @@ function handleKeyboardButtonPress(event) {
     //show the updated life to the screen
     // currentLifeElements.innerText = newLife;
   }
-
-  //
-  removeBackgroundColorPressedKey(screenShowAlphabet);
-
-  // To continue the game call alphabeticGame function for get a random alphabet
-
-  alphabaticGame();
 }
 
 document.addEventListener("keyup", handleKeyboardButtonPress);
@@ -102,31 +96,30 @@ function alphabaticGame() {
 }
 
 function playNow() {
-    //hide everything wiout playground
+  //hide everything wiout playground
 
   hideElementById("home-section");
-  hideElementById('play-ground');
-  showElementById('final-score');
+  hideElementById("final-score");
   showElementById("play-ground");
 
-
   //reset score and life
-  
-  setElementValueById('current-life',5);
-  setElementValueById('current-score',0);
-  
+
+  setElementValueById("current-life", 5);
+  setElementValueById("current-score", 0);
+
   alphabaticGame();
 }
 
+function gameOver() {
+  hideElementById("play-ground");
+  showElementById("final-score");
 
-
-function gameOver(){
-    hideElementById('play-ground');
-    showElementById('final-score');
-
-    //get the update final score
-    //1. get the final score 
-    const lastScore=getElementVlaueById('current-score');
-    // console.log(lastScore)
-    setElementValueById('total-score',lastScore);
+  //get the update final score
+  //1. get the final score
+  const lastScore = getElementVlaueById("current-score");
+  // console.log(lastScore)
+  setElementValueById("total-score", lastScore);
+  // when game game life is end then reset current alphabet heilighter
+  const currentAlphabet = getElementTextById("current-alphabet");
+  removeBackgroundColorPressedKey(currentAlphabet);
 }

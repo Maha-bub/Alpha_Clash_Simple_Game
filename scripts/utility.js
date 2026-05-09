@@ -9,6 +9,42 @@ function showElementById(ElementId){
     playgroundSection.classList.remove('hidden');
 }
 
+// heiglight key for every randomly genarated alphabet
+function setBackgroundColorKey(keyId){
+    const alphabet=document.getElementById(keyId);
+    alphabet.classList.add('bg-orange-400');
+
+}
+
+
+function removeBackgroundColorPressedKey(ElementId){
+    const element=document.getElementById(ElementId);
+    element.classList.remove('bg-orange-400');
+}
+
+
+
+function getElementVlaueById(ElementId){
+    const element=document.getElementById(ElementId);
+    const elementValueText=element.innerText;
+    const value=parseInt(elementValueText);
+    return value;
+}
+
+
+
+function setElementValueById(ElementId,value){
+    const element=document.getElementById(ElementId);
+    element.innerText=value;
+}
+
+
+function getElementTextById(elementId){
+    const element=document.getElementById(elementId);
+    const text=element.innerText;
+    return text;
+}
+
 
 function randomAlphabet(){
     const alphabeticString='abcdefghijklmnopqrstuvwxyz';
@@ -23,27 +59,9 @@ function randomAlphabet(){
     
 }
 
-// heiglight key for every randomly genarated alphabet
-function setBackgroundColorKey(keyId){
-    const alphabet=document.getElementById(keyId);
-    alphabet.classList.add('bg-orange-400');
-}
-
-function removeBackgroundColorPressedKey(ElementId){
-    const element=document.getElementById(ElementId);
-    element.classList.remove('bg-orange-400');
-}
 
 
-function getElementVlaueById(ElementId){
-    const element=document.getElementById(ElementId);
-    const elementValueText=element.innerText;
-    const value=parseInt(elementValueText);
-    return value;
-}
 
 
-function setElementValueById(ElementId,value){
-    const element=document.getElementById(ElementId);
-    element.innerText=value;
-}
+
+
